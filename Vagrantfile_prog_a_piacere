@@ -1,0 +1,14 @@
+Vagrant.configure("2") do |config|
+
+  # Definire VM chiamata "node1"
+  config.vm.define "node1" do |node|
+
+    # Settare il sistema operativo usando l'immagine
+    node.vm.box = "ubuntu/xenial64"
+
+    # Installare Apache usando una shell di provisioning
+    node.vm.provision "shell", inline: <<-SHELL
+      apt-get update && apt-get install -y apache2
+    SHELL
+  end
+  end
