@@ -1,11 +1,12 @@
--echo "The name of this script is \"$0\"."
+-echo "The name of this script is \"$0\"."  
 stampa il nome dello script stesso all'interno dello script
 
--basename $0:
-Questo è un comando che estrae il nome del file da un determinato percorso.
+-basename $0:  
+Questo è un comando che estrae il nome del file da un determinato percorso.  
 -$0: Questa variabile speciale rappresenta il nome dello script corrente (incluso il percorso)
 
-Lo script utilizza una serie di if istruzioni per verificare l'esistenza di ciascun parametro passato allo script:
+Lo script utilizza una serie di if istruzioni per verificare l'esistenza di ciascun parametro passato allo script:  
+
 -n "$variable": Questa condizione controlla se la variabile non è vuota (ha un valore).
 Le virgolette vengono utilizzate "$variable"per evitare problemi con l'espansione delle variabili o caratteri speciali all'interno dell'argomento.
 #è necessario eseguire l'escape all'interno dell'istruzione echo ( echo "Parameter #1 is $1") utilizzando le virgolette per evitare l'interpretazione come carattere di commento.
